@@ -1,3 +1,5 @@
+import "./styles.css";
+
 const translations = {
   en: {
     nav_about: "About",

@@ -1,6 +1,21 @@
 {
+  "name": "leo606.github.io",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.12",
-    "tailwindcss": "^4.1.12"
+    "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
+    "@tailwindcss/postcss": "^4.1.12",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "postcss-import": "^16.1.0",
+    "tailwindcss": "^4.1.12",
+    "vite": "^5.2.11"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   }
 }
