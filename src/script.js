@@ -83,33 +83,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll(".nav-link");
-
-  const observerOptions = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.4,
-  };
-
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const targetId = entry.target.id;
-        navLinks.forEach((link) => {
-          link.classList.remove("nav-link-active");
-          if (link.getAttribute("href") === `#${targetId}`) {
-            link.classList.add("nav-link-active");
-          }
-        });
-      }
-    });
-  }, observerOptions);
-
-  sections.forEach((section) => {
-    observer.observe(section);
-  });
-
   const projectsData = [
     {
       title: "Music bucket",

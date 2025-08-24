@@ -8,6 +8,10 @@ body {
 .nav-link-active {
     color: #38bdf8;
 }
+.lang-switcher-separator,
+.lang-switcher {
+    cursor: default;
+}
 .form-input:focus,
 .btn:focus {
     outline: none;
