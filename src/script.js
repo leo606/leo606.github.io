@@ -7,9 +7,9 @@ const translations = {
     nav_blog: "Blog",
     nav_contact: "Contact",
     hero_title:
-      "Back-End Engineer specializing in scalable <span class='text-sky-400'>Node.js</span> applications.",
+      "Hello! I'm Leo Ferreira, Software Engineer specialized in <span class='text-sky-400'>Back-end</span> applications.",
     hero_subtitle:
-      "I design and build robust, efficient, and scalable back-end systems, APIs, and database architectures. Let's build something amazing together.",
+      "With four years of experience, I specialize in designing and building robust, efficient, and scalable back-end systems, APIs, and database architectures. I am proficient in Node.js, TypeScript and Python, with a strong focus on software architecture and code quality.",
     hero_button_work: "View My Work",
     hero_button_contact: "Get In Touch",
     about_title: "About Me",
@@ -34,9 +34,9 @@ const translations = {
     nav_blog: "Blog",
     nav_contact: "Contato",
     hero_title:
-      "Engenheiro Back-End especializado em aplicações <span class='text-sky-400'>Node.js</span> escaláveis.",
+      "Olá! Eu sou Leo Ferreira, Engenheiro de Software especializado em aplicações <span class='text-sky-400'>Back-end</span>",
     hero_subtitle:
-      "Eu projeto e construo sistemas de back-end, APIs e arquiteturas de banco de dados robustas, eficientes e escaláveis. Vamos construir algo incrível juntos.",
+      "Com quatro anos de experiência, sou especializado em projetar, desenvolver sistemas back-end robustos, eficientes e escaláveis. Tenho experiência em Node.js, TypeScript e Python, com grande foco em arquitetura de software e qualidade de código.",
     hero_button_work: "Veja Meu Trabalho",
     hero_button_contact: "Entre em Contato",
     about_title: "Sobre Mim",
