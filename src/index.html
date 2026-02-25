@@ -295,7 +295,17 @@
                     I'm currently available for freelance work and open to new
                     opportunities. Feel free to reach out!
                 </p>
-                <form class="max-w-xl mx-auto">
+                <form
+                    class="max-w-xl mx-auto"
+                    action="https://formspree.io/f/mykdokyr"
+                    method="POST"
+                >
+                    <input
+                        type="hidden"
+                        name="_next"
+                        value="https://leo606.github.io/#contact"
+                    />
+                    <input type="text" name="_gotcha" style="display: none" />
                     <div class="mb-4">
                         <label
                             for="name"
@@ -338,6 +348,7 @@
                             class="form-input w-full bg-gray-800 border border-gray-700 rounded-lg py-2 px-4 text-white focus:border-sky-500 transition-colors"
                         ></textarea>
                     </div>
+
                     <button
                         type="submit"
                         class="btn w-full bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-6 rounded-lg transition-transform duration-300 hover:scale-105"
