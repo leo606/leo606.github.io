@@ -66,6 +66,54 @@ document.addEventListener("DOMContentLoaded", () => {
     projectsContainer.appendChild(projectCard);
   });
 
+  async function fetchDevToPosts() {
+    const blogContainer = document.getElementById("blog-container");
+    if (!blogContainer) return;
+
+    try {
+      const response = await fetch(
+        "https://dev.to/api/articles?username=leo606",
+      );
+      const posts = await response.json();
+
+      if (posts.length === 0) {
+        const blogSection = document.getElementById("blog");
+        blogSection && blogSection.remove();
+      }
+
+      blogContainer.innerHTML = "";
+
+      posts.forEach((post) => {
+        const postDate = new Date(post.published_at).toLocaleDateString(
+          undefined,
+          {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+          },
+        );
+
+        const postElement = document.createElement("div");
+        postElement.className =
+          "bg-gray-800 rounded-lg p-6 border border-gray-700 hover:border-sky-500 transition-colors duration-300";
+
+        postElement.innerHTML = `
+            <h3 class="font-bold text-xl text-white mb-1">${post.title}</h3>
+            <p class="text-gray-500 text-sm mb-3">Published on ${postDate}</p>
+            <p class="text-gray-400 mb-4">${post.description}</p>
+            <a href="${post.url}" target="_blank" class="text-sky-400 font-medium hover:underline">Read More →</a>
+        `;
+        blogContainer.appendChild(postElement);
+      });
+    } catch (error) {
+      console.error("Error fetching Dev.to posts:", error);
+      blogContainer.innerHTML =
+        '<p class="text-gray-400">Failed to load articles.</p>';
+    }
+  }
+
+  fetchDevToPosts();
+
   function applyTranslations(lang) {
     const langData = translations[lang];
     if (!langData) return;
